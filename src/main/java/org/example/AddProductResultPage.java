@@ -7,7 +7,7 @@ import org.testng.Assert;
 public class AddProductResultPage extends Utils {
       private By _clickonElement=By.className("cart-lable");
    // private By _Email=By.name("Email");
-    public void clickOnShoopingBasket(){
+    public void clickOnShoppingBasket(){
         String name1 = getTextFromElement(By.partialLinkText("Leica T Mirrorless Digital Camera"));
         System.out.println("Product name before adding to cart: " + name1);//
         String expectedResult="Your product has been added";

@@ -10,7 +10,7 @@ public class TestSuit extends BaseTest {
     // BasePage basePage=new BasePage();
     //DriverManager driverManager=new DriverManager();
     // Utils utils=new Utils();
-    VoteOnHopePage voteOnHopePage = new VoteOnHopePage();
+    VoteOnHomePage voteOnHopePage = new VoteOnHomePage();
     //VoteResultPage voteResultPage=new VoteResultPage();
     LoginPage loginPage = new LoginPage();
     RegisteredUserVotePage registeredUserVotePage = new RegisteredUserVotePage();
@@ -25,7 +25,7 @@ public class TestSuit extends BaseTest {
     CompareBasket compareBasket = new CompareBasket();
 
     @Test
-    public void c_toVeryfyUserShouldBeLoggedInSuccessFully() {
+    public void c_toVerifyUserShouldBeLoggedInSuccessFully() {
         //click on register button
         homePage.clickOnRegisterButton();
         registrationPage.fillInRegisterDetails();
@@ -34,23 +34,23 @@ public class TestSuit extends BaseTest {
     }
 
     @Test
-    public void b_toVeryfyNonRegisteredUserCanNotVote() {
+    public void b_toVerifyNonRegisteredUserCanNotVote() {
         voteOnHopePage.userCanNotVoteWithoutRegistration();
 
     }
 
     @Test
-    public void d_toVeryfyRegisteredUserShouldbeAbleToVote() {
+    public void d_toVerifyRegisteredUserShouldbeAbleToVote() {
         registerToLogin.userShouldBeAbleToLogin();
         loginPage.userLogin();
         //user should be able to vote
-        registeredUserVotePage.cliclOnVote();
+        registeredUserVotePage.clicklOnVote();
 
 
     }
 
     @Test
-    public void f_toVeryfyusershouldbeableToAddTheProduct() {
+    public void f_toVerifyUserShouldbeAbleToAddTheProduct() {
         //click on elctronics
         electronicsPage.clcikOnelectronics();
         //clcik ok camara and photo
@@ -58,12 +58,12 @@ public class TestSuit extends BaseTest {
         //clcik on camara to add to cart
         productAddToCartPage.clickOnProudct();
         //click on the shopping basket
-        addProductResultPage.clickOnShoopingBasket();
+        addProductResultPage.clickOnShoppingBasket();
 
     }
 
     @Test
-    public void a_userShouldBeAbletoEmail() {
+    public void a_toVerifyUserShouldBeAbleToEmail() {
        //click on product
         homePage.clcikOnMacbook();
         //click on send email

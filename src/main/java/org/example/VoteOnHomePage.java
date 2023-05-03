@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class VoteOnHopePage extends Utils {
+public class VoteOnHomePage extends Utils {
 
     public void userCanNotVoteWithoutRegistration() {
         String A = "Only Registered User can vote ";

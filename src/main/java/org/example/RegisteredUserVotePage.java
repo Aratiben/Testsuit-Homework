@@ -5,7 +5,7 @@ import org.testng.Assert;
 
 public class RegisteredUserVotePage extends Utils {
 
-    public void cliclOnVote(){
+    public void clicklOnVote(){
          String expectedResult="Your vot has cubmitted";
         //clickOnElement(By.xpath("//button[@class='button-1 login-button']"));
         clickOnElement(By.id("pollanswers-2"));

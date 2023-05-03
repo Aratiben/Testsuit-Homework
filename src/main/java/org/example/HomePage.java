@@ -9,7 +9,7 @@ public class HomePage extends Utils {
         clickOnElement(_registerButton);
     }
     public void clcikOnMacbook(){
-        clickOnElement(By.xpath("(//button[@class='button-2 product-box-add-to-cart-button'])[2]"));
+        clickOnElement(By.xpath("(//button[contains(@title,'Add to compare list')])[1]"));
     }
     public void compareItems(){
         clickOnElement(By.xpath("(//button[@class='button-2 add-to-compare-list-button'])[3]"));
