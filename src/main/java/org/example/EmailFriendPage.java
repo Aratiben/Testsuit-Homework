@@ -8,9 +8,7 @@ public class EmailFriendPage extends Utils {
     public void sendEmailToFriend() {
         String B = "Only Registered user can refer a product to a friend";
 
-        //  clickOnElement(By.xpath("//button[@class='button-1 login-button']"));
-        //  clickOnElement(By.xpath("(//a[@href='/build-your-own-computer'])[2]"));
-        //   clickOnElement(By.xpath("(//button[@type='button'])[4]"));
+
         typeText(By.className("friend-email"), "abc@yahoo.com");
         driver.findElement(By.className("your-email")).sendKeys("testEmail@gmail.com");
         clickOnElement(By.name("send-email"));
@@ -19,12 +17,14 @@ public class EmailFriendPage extends Utils {
         Assert.assertEquals(Answer, B, "Your Message has been sent");
 
     }
-    public void registertredUserCanEmail(){
+
+    public void registertredUserCanEmail() {
         String B = "Only Registered user can refer a product to a friend";
-     typeText(By.className("friend-email"), "abc@yahoo.com");
-       // driver.findElement(By.className("your-email")).sendKeys("testEmail@gmail.com");
-    clickOnElement(By.name("send-email"));
-    String Answer = getTextFromElement(By.className("result"));
-    // System.out.println(Answer);
+        typeText(By.className("friend-email"), "abc@yahoo.com");
+        // driver.findElement(By.className("your-email")).sendKeys("testEmail@gmail.com");
+        clickOnElement(By.name("send-email"));
+        String Answer = getTextFromElement(By.className("result"));
+        // System.out.println(Answer);
         Assert.assertEquals(Answer, B, "Your Message has been sent");
-}}
+    }
+}

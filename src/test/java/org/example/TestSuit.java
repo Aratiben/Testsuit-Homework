@@ -1,5 +1,6 @@
 package org.example;
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
 
 public class TestSuit extends BaseTest {
@@ -23,6 +24,9 @@ public class TestSuit extends BaseTest {
 
     MacBook macBook = new MacBook();
     CompareBasket compareBasket = new CompareBasket();
+    NewReleasePage newReleasePage = new NewReleasePage();
+    GuestCheckOut guestCheckOut = new GuestCheckOut();
+    FillDetailsAsAGuest fillDetailsAsAGuest = new FillDetailsAsAGuest();
 
     @Test
     public void c_toVerifyUserShouldBeLoggedInSuccessFully() {
@@ -64,7 +68,7 @@ public class TestSuit extends BaseTest {
 
     @Test
     public void a_toVerifyUserShouldBeAbleToEmail() {
-       //click on product
+        //click on product
         homePage.clcikOnMacbook();
         //click on send email
         macBook.clickOnSendEmail();
@@ -94,4 +98,57 @@ public class TestSuit extends BaseTest {
         //clcik on compare basket
         compareBasket.clickOnCompareBasket();
     }
-}
+
+
+    @Test
+    public void toVerifyprintTheProductPage() {
+        homePage.printProductName();
+    }
+
+    @Test
+    public void toVerifySerchAlertMessage() {
+        homePage.clickOnOkButton();
+    }
+
+    @Test
+    public void toVerifyWhenUserAddTheCommentInNewReleasedtShouldBeDisplayedLast() {
+        homePage.clickOnNewRelease();
+        newReleasePage.fillDetailsOnthePage();
+
+    }
+
+    @Test
+    public void toVerifyUserCanNotSubmitTheVoteWithoutSelectingAnswer() {
+        homePage.clickOnVote();
+    }
+
+    @Test
+    public void toVerifyUserShouldableToSelectAndVerifyTheCurrencyAcoordingly() {
+        homePage.clcikOncurrency();
+    }
+
+    @Test
+    public void toVerifyUserShouldAbleToSearchNikeProductSuccessfully() {
+        homePage.clickOnSearchButton("adidas");
+    }
+
+    @Test
+    public void toVerifyUserShouldAbleToSearchAppleProductSuccessfully() {
+        homePage.clickOnSearchButton("Nike");
+    }
+
+    @Test
+    public void toVeryfyGuestUserShouldBeAbleToCheckOut() {
+        homePage.clickOnProduct();
+        guestCheckOut.guestCheckout();
+        fillDetailsAsAGuest.fillDetailsAsAGuest();
+    }
+
+    @Test
+    public void toVerifyUserCanUseFacebook() {
+        homePage.clickOnFacebook();
+
+    }
+
+
+    }

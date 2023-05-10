@@ -22,6 +22,11 @@ public class RegistrationPage extends Utils {
             typeText(_firstName, "TestFirstName");
             //type your last name
             typeText(_LastName, "TestLastName");
+
+            selectelementsByValue((By.xpath("//select[@name='DateOfBirthDay']")),"2");
+            selectelementByIndex((By.xpath("//select[@name='DateOfBirthMonth']")),10);
+
+            selectelementByText(By.xpath("//select[@name ='DateOfBirthYear']"),"2000");
             //type email address
             typeText(_Email,"testEmail" + timeStamp() + "@gmail.com");
             //type password

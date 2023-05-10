@@ -13,7 +13,7 @@ public class BaseTest {
     }
 
    @AfterMethod
-    public void teardown() {
+   public void teardown() {
         driverManager.closeBrowser();
     }
 }
